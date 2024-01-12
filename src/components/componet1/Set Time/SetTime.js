@@ -1,5 +1,5 @@
 import { useContext, useRef } from "react";
-import ShowModal from "../../UI/ShowModal";
+import ShowModal from "../../UI/modal/ShowModal";
 import "./SetTime.css";
 import ToastContext from "../../store/toast-context";
 
@@ -10,14 +10,14 @@ const SetTime = (props) => {
     const settimeoutHandler = () => {
         const time = enteredTime.current.value;
         timeCtx.setTime(time*1000)
-        props.onClose();
+        timeCtx.setIsTimeForm(false);
     }
 
   return (
-    <ShowModal onClose={props.onClose}>
+    <ShowModal onClose={(() => timeCtx.setIsTimeForm(false))}>
       <div className="setTimeFormContainer">
         <div className="setTimeContent">
-        <button onClick={props.onClose} className="setTimebtn">Close</button>
+        <button onClick={(() => timeCtx.setIsTimeForm(false))} className="setTimebtn">Close</button>
         </div>
         <form className="setTimeForm">
           <label>Set Timeout:-</label>

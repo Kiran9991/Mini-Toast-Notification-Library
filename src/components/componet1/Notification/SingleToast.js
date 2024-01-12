@@ -16,7 +16,7 @@ const SingleToast = (props) => {
 
   return (
     <li className="toastMessage" key={item.id} onMouseOver={() => toastCtx.setTime(7000)}>
-      <span className="messageContent">{`${`test`}:${item.Test}`}</span>
+      <span className="messageContent">{`${item.test}:${item.count}`}</span>
       <button onClick={deleteToast}>close</button>
     </li>
   );

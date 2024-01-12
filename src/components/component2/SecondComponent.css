@@ -1,0 +1,24 @@
+.spaceAround {
+    display: grid;
+    margin: 5rem;
+}
+
+.formContainer {
+    grid-gap: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto auto;
+    justify-self: start;
+}
+
+.form2 {
+    grid-gap: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.form2 input {
+    border: 0.1rem solid;
+    border-radius: 0.4rem;
+    padding: 0.8rem 1rem;
+}
