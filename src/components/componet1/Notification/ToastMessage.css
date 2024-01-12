@@ -1,0 +1,20 @@
+.notificationToast {
+    bottom: 0;
+    display: grid;
+    gap: 1rem;
+    left: 50%;
+    padding: 1rem 1rem 3rem;
+    position: fixed;
+    transform: translateX(-50%);
+}
+
+.toastMessage {
+    background-color: #0ae70a;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+}
+
+.messageContent {
+    margin-right: 10px;
+}

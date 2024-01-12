@@ -1,0 +1,22 @@
+.spaceAround {
+    display: grid;
+    padding: 5rem;
+}
+
+.container {
+    grid-gap: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto auto;
+    justify-self: start;
+}
+
+.showToastbtn {
+    background-color: lightblue;
+    border: 0.1rem solid transparent;
+    border-radius: 0.5rem;
+    color: #fff;
+    color: var(--clr-light);
+    padding: 1rem 2rem;
+}
+
