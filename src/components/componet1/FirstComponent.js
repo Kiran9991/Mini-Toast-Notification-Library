@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 
 import "./FirstComponent.css";
-import ToastMessage from "./Notification/ToastMessage";
+import ToastMessage from "../Notification/ToastMessage";
 import ToastContext from "../store/toast-context";
 import SetTime from "./Set Time/SetTime";
 import ToastNotificationBtn from "../UI/ToastNotificationBtn";

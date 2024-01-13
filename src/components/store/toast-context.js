@@ -8,13 +8,16 @@ const ToastContext = React.createContext({
     toastTime: 7000,
     setTime: (time) => {},
     isTimeForm: false,
-    setIsTimeForm: (val) => {}
+    setIsTimeForm: (val) => {},
+    isLoading: false,
+    setLoading: (val) => {}
 })
 
 export const ToastContextProvider = (props) => {
     const [toast, setToast] = useState([]);
     const [time, setToastTime] = useState(7000);
     const [showSetTimeoutForm, setShowSetTimeoutForm] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const addToastHandler = (item) => {
         setToast([...toast, item])
@@ -33,6 +36,8 @@ export const ToastContextProvider = (props) => {
 
     const setShowSetTimeoutFormHandler = (val) => setShowSetTimeoutForm(val);
 
+    const setIsLoadingHandler = (val) => setIsLoading(val);
+
     const toastContext = {
         toast: toast,
         addToast: addToastHandler,
@@ -40,7 +45,9 @@ export const ToastContextProvider = (props) => {
         toastTime: time,
         setTime: setToastTimeHandler,
         isTimeForm: showSetTimeoutForm,
-        setIsTimeForm: setShowSetTimeoutFormHandler
+        setIsTimeForm: setShowSetTimeoutFormHandler,
+        isLoading: isLoading,
+        setLoading: setIsLoadingHandler
     }
 
     return <ToastContext.Provider value={toastContext}>

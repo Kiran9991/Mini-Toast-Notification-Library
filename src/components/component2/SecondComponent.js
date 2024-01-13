@@ -2,7 +2,7 @@ import SetTime from "../componet1/Set Time/SetTime";
 import "./SecondComponent.css";
 import ToastNotificationBtn from "../UI/ToastNotificationBtn";
 import SetTimeoutBtn from "../UI/SetTimeoutBtn";
-import ToastMessage from "../componet1/Notification/ToastMessage";
+import ToastMessage from "../Notification/ToastMessage";
 import { useContext, useRef, useState } from "react";
 import ToastContext from "../store/toast-context";
 
@@ -25,7 +25,7 @@ const SecondComponent = () => {
         <form className="form2" onSubmit={submitFormHandler}>
           <label>Enter Custom Toast Text</label>
           <div>
-            <input type="text" ref={enteredText}/>
+            <input type="text" ref={enteredText} placeholder="Enter here"/>
           </div>
           <ToastNotificationBtn type='submit'>Show Custom Toast Message</ToastNotificationBtn>
           <SetTimeoutBtn>Set Timeout</SetTimeoutBtn>

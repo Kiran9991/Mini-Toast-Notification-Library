@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./ToastMessage.css";
-import ToastContext from "../../store/toast-context";
+import ToastContext from "../store/toast-context";
 import SingleToast from "./SingleToast";
 
 const ToastMessage = () => {
@@ -8,10 +8,14 @@ const ToastMessage = () => {
 
   const limitedToast = toastCtx.toast.slice(0,3);
 
+  function getCountriesName() {
+    console.log('get country Names')
+  }
+
   return (
     <ul className="notificationToast">
       {limitedToast.map((item, index) => (
-        <SingleToast item={item} key={item.id} />
+        <SingleToast onComplete={getCountriesName} item={item} key={item.id} />
       ))}
     </ul>
   );
